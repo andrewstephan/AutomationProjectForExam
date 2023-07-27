@@ -30,5 +30,6 @@ public class ShippingDetailsOneFieldLeftBlank extends MainPage{
     public void cityFromRomania(String city){cityInput.sendKeys(city);}
     public void selectCountryFromDropDownList(String countrier_dropdown_menu){selectCountry.sendKeys(countrier_dropdown_menu);}
     public void submitOrderButton(){submitOrder.click();}
+    public boolean submitOrderIsThere(){return submitOrder.isDisplayed();}
     public void logoutButtonFromOrderPage(){logoutButton.click();}
 }

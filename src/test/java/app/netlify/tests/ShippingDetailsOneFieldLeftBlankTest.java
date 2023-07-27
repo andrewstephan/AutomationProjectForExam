@@ -2,6 +2,7 @@ package app.netlify.tests;
 
 import app.netlify.pages.CheckoutWithRandomAndNegativeInputs;
 import app.netlify.pages.ShippingDetailsOneFieldLeftBlank;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static app.netlify.pages.ShopEcommerceLogin.LOGIN_URL;
@@ -23,6 +24,7 @@ public class ShippingDetailsOneFieldLeftBlankTest extends MainTest{
         shippingDetailsOneFieldLeftBlank.cityFromRomania("");
         shippingDetailsOneFieldLeftBlank.selectCountryFromDropDownList("Romania");
         waitForNumberOfSeconds(2);
+        Assert.assertTrue(shippingDetailsOneFieldLeftBlank.submitOrderIsThere());
         shippingDetailsOneFieldLeftBlank.submitOrderButton();
         waitForNumberOfSeconds(2);
         shippingDetailsOneFieldLeftBlank.logoutButtonFromOrderPage();

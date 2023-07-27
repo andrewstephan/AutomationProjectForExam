@@ -15,7 +15,10 @@ public class ShopEcommerceNegativeLogin extends MainPage{
     @FindBy(id = "password") private WebElement passwordInput;
     @FindBy(id = "submitLoginBtn") private WebElement loginButton;
 
+    @FindBy(id = "message") private WebElement negativeLoginTest;
+
     public void enterEmail(String email){emailInput.sendKeys(email);}
     public void enterPassword(String password){passwordInput.sendKeys(password);}
     public void clickAuthButton(){loginButton.click();}
+    public boolean messageIsDisplayed(){return negativeLoginTest.getText().contains("Bad credentials! Please try again! Make sure that you've registered.");}
 }

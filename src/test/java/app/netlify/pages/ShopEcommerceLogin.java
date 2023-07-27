@@ -3,6 +3,7 @@ package app.netlify.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class ShopEcommerceLogin extends MainPage{
 
@@ -24,6 +25,9 @@ public class ShopEcommerceLogin extends MainPage{
 
     public void clickAuthButton(){loginButton.click();}
     public void logoutButtonFromOrderPage(){logoutButton.click();}
+
+    public boolean logoutOutIsDisplayed(){return logoutButton.isDisplayed();}
+
 
 
 }

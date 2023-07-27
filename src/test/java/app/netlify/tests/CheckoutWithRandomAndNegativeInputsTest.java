@@ -2,6 +2,7 @@ package app.netlify.tests;
 
 import app.netlify.pages.CheckoutWithRandomAndNegativeInputs;
 import app.netlify.pages.ShopEcommerceLogin;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static app.netlify.pages.ShopEcommerceLogin.LOGIN_URL;
@@ -23,9 +24,12 @@ public class CheckoutWithRandomAndNegativeInputsTest extends MainTest{
         checkoutWithRandomAndNegativeInputs.cityFromRomania("Random City");
         checkoutWithRandomAndNegativeInputs.selectCountryFromDropDownList("Romania");
         waitForNumberOfSeconds(2);
+        Assert.assertTrue(checkoutWithRandomAndNegativeInputs.submitButtonIsDisplayed());
         checkoutWithRandomAndNegativeInputs.submitOrderButton();
         waitForNumberOfSeconds(2);
         checkoutWithRandomAndNegativeInputs.logoutButtonFromOrderPage();
+
+
 
 
     }

@@ -35,6 +35,7 @@ public class AddToCart extends MainPage{
     public void clickAddToCart(){addToCartPhone.click();}
     public void clickRemoveToCart(){removeElement.click();}
     public void clickAddToCartAnotherPhone(){addAnotherPhoneToCart.click();}
+    public boolean checkOutButtonIsThere(){return checkOut.isDisplayed();}
     public void checkOutButton(){checkOut.click();}
     public void inputPhone(String phone){intPhone.sendKeys(phone);}
     public void inputStreet(String street){streetInput.sendKeys(street);}
@@ -42,5 +43,6 @@ public class AddToCart extends MainPage{
     public void selectCountryFromDropDownList(String countrier_dropdown_menu){selectCountry.sendKeys(countrier_dropdown_menu);}
     public void submitOrderButton(){submitOrder.click();}
     public void logoutButtonFromOrderPage(){logoutButton.click();}
+
 }
 
